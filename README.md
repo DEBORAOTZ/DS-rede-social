@@ -144,6 +144,7 @@ Por exemplo, se definirmos a  `color: 'red'`  e salvarmos, veremos que as barras
 Queremos que o gráfico utilize as cores definidas com nossa paleta de cores, que foi criada no arquivo  `style.css`. Para isso, vamos instruir o código a pegar os estilos do documento, especificamente do  `body`, usando o método  `getComputedStyle()`  e passando  `document.body`  como parâmetro. Para pegar a propriedade específica de cor, também passaremos  `get.PropertyValue('--primary-color')`.
 
 ```go
+]
 const data = [
   {
     x: 'nomeDasRedes',
@@ -153,9 +154,8 @@ const data = [
       color: getComputedStyle(document.body).getPropertyValue('--primary-color')
     }
   }
-]
-
 ```
+
 
 Ao salvar e voltar ao projeto, veremos que agora as barras estão utilizando as cores do projeto.
 
