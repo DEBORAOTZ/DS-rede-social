@@ -20,6 +20,9 @@ async function quantidadeUsuarios() {
 
   
   
+
+
+
 const layout = {
   plot_bgcolor: getCSS('--bg-color'),
   paper_bgcolor: getCSS('--bg-color'),
@@ -30,25 +33,37 @@ const layout = {
          color: getCSS('--primary-color'),
          family: getCSS('--font'),
          size: 30
+     }// código omitido
+
+  },
+  xaxis: {
+      tickfont: tickConfig,
+      title: {
+          text: 'nome das redes sociais',
+          font: {
+              color: getCSS('--secondary-color')
+          }
+      }
+  },
+  yaxis: {
+      tickfont: tickConfig,
+      title: {
+          text: 'bilhões de usuários ativos',
+          font: {
+              color: getCSS('--secondary-color')
+          }
+      }
   }
-
-  const grafico = document.createElement('div')
-  grafico.className = 'grafico'
-  document.getElementById('graficos-container').appendChild(grafico)
-  Plotly.newPlot(grafico, data, layout)
-
- 
   
 
-
- 
-  
-  
- 
 }
 
 
-  
-    
+const grafico = document.createElement('div')
+grafico.className = 'grafico'
+document.getElementById('graficos-container').appendChild(grafico)
+Plotly.newPlot(grafico, data, layout)
+
+}
 
 quantidadeUsuarios()
