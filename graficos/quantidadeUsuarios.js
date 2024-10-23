@@ -1,8 +1,5 @@
 import { getCSS, tickConfig } from "./common.js"
 
-
-// código omitido
-
 async function quantidadeUsuarios() {
   const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
   const res = await fetch(url)
@@ -24,8 +21,6 @@ async function quantidadeUsuarios() {
   
   
 
-
-
 const layout = {
   plot_bgcolor: getCSS('--bg-color'),
   paper_bgcolor: getCSS('--bg-color'),
@@ -36,11 +31,9 @@ const layout = {
          color: getCSS('--primary-color'),
          family: getCSS('--font'),
          size: 30
-     }// código omitido
-
+     }
   },
   xaxis: {
-      tickfont: tickConfig,
       title: {
           text: 'nome das redes sociais',
           font: {
@@ -57,9 +50,7 @@ const layout = {
           }
       }
   }
-  
-
-}
+  }
 
 
 const grafico = document.createElement('div')
